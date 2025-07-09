@@ -28,7 +28,7 @@ export const authService = {
 
     async loginAccount(){
         try {
-            const loginedUser = await appwrite.account.createOAuth2Session('github','http://localhost:5173/generate','http://localhost:5173')
+            const loginedUser = await appwrite.account.createOAuth2Session('github','http://localhost:5173','http://localhost:5173')
             if(loginedUser){
                 const currentUser = await appwrite.account.get();
                 const currentUserCopy = {
