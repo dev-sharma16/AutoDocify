@@ -17,13 +17,33 @@ export default function Generate() {
     navigate("/file")
   }
   return (
-    <div className=' min-h-80 flex flex-col justify-center items-center w-screen'> 
-      <h1>Enter the URL of the Github Repositry</h1>
-      <form onSubmit={handleSubmit(submitLinkHandler)} className='flex flex-col justify-center items-center w-screen'>
-        <input {...register("link", {required: true})} className='border-2'/>
-        {errors.link && <span className='text-red-700'>Enter the link</span>}
-        <button className='border-2'>Submit</button>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-neutral-950 text-white px-6 py-16">
+      {/* Title */}
+      <h1 className="text-4xl font-bold  mb-6">
+        Enter GitHub Repository URL
+      </h1>
+
+      {/* Form */}
+      <form
+        onSubmit={handleSubmit(submitLinkHandler)}
+        className="flex flex-col gap-4 w-full max-w-lg"
+      >
+        <input
+          {...register("link", { required: true })}
+          placeholder="https://github.com/username/repo"
+          className="w-full px-4 py-3 rounded-lg border-2 border-gray-700 bg-neutral-900 text-white placeholder-gray-500 focus:outline-none focus:border-amber-500"
+        />
+        {errors.link && (
+          <span className="text-red-500 text-sm -mt-2">Please enter a valid GitHub repo URL.</span>
+        )}
+
+        <button
+          type="submit"
+          className="bg-amber-500 hover:bg-amber-600 transition-colors text-black font-semibold px-6 py-3 rounded-lg shadow-lg"
+        >
+          Submit
+        </button>
       </form>
     </div>
-  )
+  );
 }
