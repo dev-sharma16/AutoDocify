@@ -5,10 +5,12 @@ import Nav from './components/Nav'
 
 function App() {
   return(
-    <div className='bg-gray-800 h-screen w-screen'>
+    <>
       <Nav/>
-      <MainRoutes/>
-    </div>
+      <div className='bg-gray-800 h-dvh w-full pt-15'>
+        <MainRoutes/>
+      </div>
+    </>
   )
 }
 
