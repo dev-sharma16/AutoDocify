@@ -26,9 +26,9 @@ export const authService = {
         }
     },
 
-    async loginAccount(email,password){
+    async loginAccount(){
         try {
-            const loginedUser = await appwrite.account.createEmailPasswordSession(email,password);
+            const loginedUser = await appwrite.account.createOAuth2Session('github','http://localhost:5173/generate','http://localhost:5173')
             if(loginedUser){
                 const currentUser = await appwrite.account.get();
                 const currentUserCopy = {
@@ -46,7 +46,22 @@ export const authService = {
 
     async logoutAccount(){
         try {
+            const user = await appwrite.account.get();
             return await appwrite.account.deleteSession('current');
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
+    async getCurrentUser(){
+        try {
+            const currentUser = await appwrite.account.get();
+            const currentUserCopy = {
+                $id: currentUser.$id,
+                email: currentUser.email,
+                name: currentUser.name,
+            }
+            return currentUserCopy;
         } catch (error) {
             console.log(error);
         }
