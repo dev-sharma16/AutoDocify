@@ -28,12 +28,12 @@ export default function Nav() {
         fetchUser();
     }, []);
     return (
-        <nav className='flex items-center px-15 py-3 justify-between bg-neutral-900/30  w-[100%] fixed top-0 z-50 backdrop-blur-md border-b border-white/10 text-white shadow-sm'>
+        <nav className='flex items-center px-15 py-2 justify-between bg-neutral-900/30  w-[100%] fixed top-0 z-50 backdrop-blur-md border-b border-white/10 text-white shadow-sm'>
             <NavLink to='/'> 
                 <img 
                     src="/src/assets/Screenshot 2025-07-07 223358-Picsart-BackgroundRemover.png" 
                     alt="logo" 
-                    className='h-10'
+                    className='h-10 mt-2'
                 />
             </NavLink>
             {/* <NavLink to='/'>Home</NavLink> */}

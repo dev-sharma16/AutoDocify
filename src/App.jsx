@@ -7,7 +7,7 @@ function App() {
   return(
     <>
       <Nav/>
-      <div className='bg-gray-800 h-dvh w-full pt-15'>
+      <div className='bg-neutral-950 h-dvh w-full pt-16'>
         <MainRoutes/>
       </div>
     </>

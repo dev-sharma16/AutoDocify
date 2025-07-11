@@ -17,7 +17,7 @@ export default function Generate() {
     navigate("/file")
   }
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-neutral-950 text-white px-6 py-16">
+    <div className="flex flex-col items-center justify-center min-h-[100%] bg-neutral-950 text-white px-6 py-16">
       {/* Title */}
       <h1 className="text-4xl font-bold  mb-6">
         Enter GitHub Repository URL
@@ -39,7 +39,7 @@ export default function Generate() {
 
         <button
           type="submit"
-          className="bg-amber-500 hover:bg-amber-600 transition-colors text-black font-semibold px-6 py-3 rounded-lg shadow-lg"
+          className="bg-[#908CA0] hover:bg-[#605e6a] transition-colors text-black font-semibold px-6 py-3 rounded-lg shadow-lg text-xl"
         >
           Submit
         </button>
