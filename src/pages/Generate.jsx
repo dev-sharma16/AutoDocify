@@ -19,8 +19,8 @@ export default function Generate() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[100%] bg-neutral-950 text-white px-6 py-16">
       {/* Title */}
-      <h1 className="text-4xl font-bold  mb-6">
-        Enter GitHub Repository URL
+      <h1 className="text-4xl font-semibold mb-6 font-sans text-[#908CA0]">
+        Enter <span className='font-mono text-white'>gitHub</span>  repository <span className='font-mono text-white font-bold'>URL</span>
       </h1>
 
       {/* Form */}
@@ -31,7 +31,7 @@ export default function Generate() {
         <input
           {...register("link", { required: true })}
           placeholder="https://github.com/username/repo"
-          className="w-full px-4 py-3 rounded-lg border-2 border-gray-700 bg-neutral-900 text-white placeholder-gray-500 focus:outline-none focus:border-amber-500"
+          className="w-full px-4 py-3 rounded-lg border-2 border-gray-700 bg-neutral-900 text-white placeholder-gray-500 focus:outline-none focus:border-white"
         />
         {errors.link && (
           <span className="text-red-500 text-sm -mt-2">Please enter a valid GitHub repo URL.</span>

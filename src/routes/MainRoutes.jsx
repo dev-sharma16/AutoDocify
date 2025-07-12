@@ -11,6 +11,7 @@ import { addUser } from '../store/userSlice';
 export default function MainRoutes() {
     const user = useSelector((state)=>state.user.data);
     const dispatch = useDispatch();
+    
     useEffect(()=>{
         const fetchUser = async ()=>{
             const user = await authService.getCurrentUser()
@@ -24,7 +25,7 @@ export default function MainRoutes() {
         <Routes>
             <Route path='/' element={user ? <Generate/> : <Home/>}/>
             {/* <Route path='/generate' element={<Generate/>}/> */}
-            {/* <Route path='/file' element={<File/>}/> */}
+            <Route path='/file' element={<File/>}/>
         </Routes>
     )
 }
