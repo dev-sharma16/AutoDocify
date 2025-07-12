@@ -28,16 +28,16 @@ export default function File() {
             setError('');
 
             const content = await fetchContent(repoDetail)
-            console.log(content);
+            // console.log(content);
             dispatch(addContent(content))
-    
+            
             const aiRes = await askGemini(content,repoDetail.userName,repoDetail.repoName)
-            console.log(aiRes);  
+            // console.log(aiRes);  
             setReadme(aiRes);
 
         } catch (error) {
             console.log(error);
-            setError("Error in generating the readme file check API Key..!")
+            setError("Server is OverLoaded TryAgain later.! >_<")
         } finally {
             setLoading(false);
         }
@@ -59,7 +59,7 @@ export default function File() {
                 : <h2 className="text-3xl font-bold mb-4"><span className='font-mono text-[#908CA1]'>generated</span> ReadMe</h2>
             }
 
-            {error && <div className="text-red-500">{error}</div>}
+            {error && <div className="text-white">{error}</div>}
 
             {readme && (
                 <div className="w-full max-w-4xl flex flex-col items-center">

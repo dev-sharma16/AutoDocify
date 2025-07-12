@@ -12,7 +12,7 @@ export default function Generate() {
   const submitLinkHandler = (data) => {
     const linkDetails = extractConstants(data.link);
     dispatch(addLink(linkDetails))
-    console.log(linkDetails);
+    // console.log(linkDetails);
     reset();
     navigate("/file")
   }

@@ -4,7 +4,7 @@ import axios from "axios";
 
 async function fetchContent(repoDetail,path=""){
   const url = `https://api.github.com/repos/${repoDetail.userName}/${repoDetail.repoName}/contents/${path}`
-  console.log(url);
+  // console.log(url);
   const files = (await axios.get(url)).data
   // console.log(files);
   let fileContent_Name = []

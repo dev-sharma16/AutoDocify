@@ -14,7 +14,7 @@ function HeroSection() {
     useEffect(()=>{
         const fetchUser = async ()=>{
             const user = await authService.getCurrentUser()
-            console.log(user);
+            // console.log(user);
             dispatch(addUser(user));
         }
         fetchUser();
