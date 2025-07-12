@@ -63,7 +63,7 @@ function HeroSection() {
                                 }}
                             >
                                 <video
-                                src="/public/VN20250711_164218.mp4"
+                                src="https://res.cloudinary.com/dodcemziu/video/upload/v1752310049/VN20250711_164218_skr9ib.mp4"
                                 autoPlay
                                 loop
                                 muted
