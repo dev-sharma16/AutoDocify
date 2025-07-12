@@ -63,7 +63,7 @@ function HeroSection() {
                                 }}
                             >
                                 <video
-                                src="/src/assets/VN20250711_164218.mp4"
+                                src="/public/VN20250711_164218.mp4"
                                 autoPlay
                                 loop
                                 muted
