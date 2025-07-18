@@ -28,7 +28,8 @@ export const authService = {
 
     async loginAccount(){
         try {
-            const loginedUser = await appwrite.account.createOAuth2Session('github','http://localhost:5173','http://localhost:5173')
+            // TODO do permanent resolve about redirection path
+            const loginedUser =  appwrite.account.createOAuth2Session('github','https://auto-docify.vercel.app','https://auto-docify.vercel.app/')
             if(loginedUser){
                 const currentUser = await appwrite.account.get();
                 const currentUserCopy = {
